@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: "mssql"
+    ports:
+      - 14330:1433
+    environment:
+      SA_PASSWORD: "P@ssw0rd"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+  # acmecompanyworkerservice:
+  #   image: acmecompanyworkerservice
+  #   build:
+  #     context: .
+  #     dockerfile: Src/AcmeCompany.WorkerService/Dockerfile

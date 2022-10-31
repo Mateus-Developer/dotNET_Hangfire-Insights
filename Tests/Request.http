@@ -1,0 +1,10 @@
+@baseUrl = https://localhost:7000/api
+
+POST {{baseUrl}}/Employee/RecurringNotification HTTP/1.1
+Content-Type: application/json
+
+{
+    "employeeId": "e4657590-0173-4fab-9dba-7cb0100effab",
+    "subject": "Recurring Notification",
+    "cron": "*/1 * * * *"
+}

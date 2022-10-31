@@ -1,0 +1,11 @@
+
+version: '3.4'
+
+services:
+  acmecompanyworkerservice:
+    image: acmecompanyworkerservice
+    build:
+      context: .
+      dockerfile: Src/AcmeCompany.WorkerService/Dockerfile
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
